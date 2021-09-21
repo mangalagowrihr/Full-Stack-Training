@@ -6,32 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Session</title>
     <style>
-        h1{
-            color: red;
-            font-size: 25px;
-        }
-        p{
-            color: blue;
-            font-weight: 100;
-        }
-        #first{
-            color:limegreen;
-        }
+       .one{
+           color: blue;
+       }
+       .two{
+           color: blueviolet;
+       }
+       .orange{
+           color: orange;
+       }
+       .big{
+           font-size: 40px;
+           font-weight: 900;
+       }
     </style>
 </head>
 <body>
     <h1>InlineCSS >> ID Selection > Element Selection</h1>
-    <h1 >Heading One</h1>
-    <p >
+    <h1 class="one" >Heading One</h1>
+    <p class="one" >
         Kitty ipsum dolor sit amet,
         shed everywhere shed everywhere stretching attack your ankles chase the red dot,
         hairball run catnip eat the grass sniff. 
     </p>
-    <h1 id="first" >Heading One</h1>
-    <p >
+    <hr />
+    <h1 class="two" >Heading One</h1>
+    <p class="two" >
         Kitty ipsum dolor sit amet,
         shed everywhere shed everywhere stretching attack your ankles chase the red dot,
         hairball run catnip eat the grass sniff. 
     </p>
+    <div>
+        Kitty ipsum dolor sit amet,
+        <b class="orange big" > evening </b>shed everywhere shed everywhere stretching attack your ankles chase the red dot,
+        hairball run catnip eat the grass sniff. 
+
+    </div>
+    <span class="big">Kitty ipsum dolor sit amet,
+        shed everywhere shed everywhere stretching attack your ankles chase the red dot,
+        hairball run catnip eat the grass sniff. </span>
+
+   
 </body>
 </html>
