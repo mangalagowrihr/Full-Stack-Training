@@ -5,18 +5,19 @@ const b=document.querySelectorAll('input')[1]
 // const b=document.getElementsByTagName('input')[1]
 
 const add=document.querySelector('#add')
+const sub=document.querySelector('#sub')
 const multiply=document.querySelector('#multiply')
 const resultBox=document.querySelector('.result')
 
 const sum=()=>{
-    const result=parseInt(a.value)+parseInt(b.value)
-    resultBox.innerHTML=result
+  
 }
 
 const product=()=>{
     const result=parseInt(a.value)*parseInt(b.value)
     resultBox.innerHTML=result
 }
+
 
 const calculate=(event,operation)=>{
 //    console.log(event.target)
@@ -27,10 +28,13 @@ const calculate=(event,operation)=>{
 //   }
 switch(operation){
     case "add":
-        resultBox.innerHTML=parseInt(a.value)+parseInt(b.value)
+        resultBox.innerHTML=parseInt(a.value)+parseInt(b.value);
         break
     case "multiply":
-        resultBox.innerHTML=parseInt(a.value)*parseInt(b.value)
+        resultBox.innerHTML=parseInt(a.value)*parseInt(b.value);
+        break
+        case "sub":
+        resultBox.innerHTML=parseInt(a.value)-parseInt(b.value);
         break
     default:
         resultBox.innerHTML="Not a valid operation"
@@ -45,4 +49,9 @@ add.addEventListener('click',()=>{
 multiply.addEventListener('click',()=>{
   
     calculate(event,'multiply')
+})
+
+sub.addEventListener('click',()=>{
+  
+    calculate(event,'sub')
 })
