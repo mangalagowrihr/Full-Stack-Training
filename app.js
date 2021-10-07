@@ -1,13 +1,34 @@
-var list=document.querySelector('ul')
+// function greet(Name= "John", age = 18){
+//      console.log(Name,age)
+//      console.log('Hello')
+//     console.log('Hey' + Name + "your age is"+ age)
+// }
 
-var arr=['Go to the GYM','cook oatmeal','Eat']
+// greet()
 
-arr.push('complete the assignment')
 
-for(var i=0;i<arr.length;i++){
-    var element=document.createElement('li')
-    var textNode=document.createTextNode(arr[i])
-    element.appendChild(textNode)
-    list.appendChild(element)   
+// function add(a=0,b=0){
+//       var sum = a + b
+//       return sum
+// }
 
-}
+// var result=add(10,20)
+// console.log(result)
+
+// var add=function(a=0,b=0){
+//    var sum=a+b
+//    return sum
+// }
+
+// console.log(add(10,20))
+
+// Arrow function
+var add=(a=0,b=0)=> {
+    var sum=a+b
+    return sum
+ }
+ 
+ console.log(add(10,20))
+
+
+
