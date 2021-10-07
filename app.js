@@ -1,57 +1,24 @@
-const a=document.querySelectorAll('input')[0]
-const b=document.querySelectorAll('input')[1]
+var arr=[1,2,3,4,5,6,7,8]
+// arr.push(6)
+// arr.unshift(6)
 
-// const a=document.getElementsByTagName('input')[0]
-// const b=document.getElementsByTagName('input')[1]
-
-const add=document.querySelector('#add')
-const sub=document.querySelector('#sub')
-const multiply=document.querySelector('#multiply')
-const resultBox=document.querySelector('.result')
-
-const sum=()=>{
+// arr.shift()
+// console.log(arr)
   
-}
+// var new_arr=arr.slice(2,5)
 
-const product=()=>{
-    const result=parseInt(a.value)*parseInt(b.value)
-    resultBox.innerHTML=result
-}
+// console.log(new_arr)
 
+// var new_arr=[]
 
-const calculate=(event,operation)=>{
-//    console.log(event.target)
-//   if(operation=='add'){
-//       console.log('adding')
-//   }else if (operation=='multiply'){
-//       console.log('multiply')
-//   }
-switch(operation){
-    case "add":
-        resultBox.innerHTML=parseInt(a.value)+parseInt(b.value);
-        break
-    case "multiply":
-        resultBox.innerHTML=parseInt(a.value)*parseInt(b.value);
-        break
-        case "sub":
-        resultBox.innerHTML=parseInt(a.value)-parseInt(b.value);
-        break
-    default:
-        resultBox.innerHTML="Not a valid operation"
+// for(var i=0;i<arr.length;i++){
+//     if (arr[i]%2==0) new_arr.push(arr[i])
+// }
 
-}
-}
+// console.log(new_arr)
 
-add.addEventListener('click',()=>{
-    calculate(event,'add')
+var new_arr=arr.filter((eliment,index)=>{
+    if(eliment<100)return true
 })
 
-multiply.addEventListener('click',()=>{
-  
-    calculate(event,'multiply')
-})
-
-sub.addEventListener('click',()=>{
-  
-    calculate(event,'sub')
-})
+console.log(new_arr)
