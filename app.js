@@ -1,17 +1,17 @@
 // 1
-setTimeout( ()=>{
-    console.log("Bhavani")
-},0)
+// console.log("one")
 
-console.log('Hi')
-console.log('Hey')
+// setTimeout is only understood by web API javascript cannot understand asynchrounous functionalities it can only understand console.log
+// setTimeout(function timeout(){    
+//     console.log("Timer")
+// },5000);
+
+// console.log("Two")
 
 // 2
-setTimeout( ()=>{
-    console.log("Bhavani")
-},5000)
+// setTimeout(()=> {console.log('Timer')},0)
 
-// 3
-var data=fetch('https://jsonplaceholder.typicode.com/todos/10')
+// for(var i=0;i<1000;i++){
+//     console.log(i)
+// }
 
-console.log(data)
