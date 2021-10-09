@@ -1,17 +1,17 @@
-const list = document.querySelector('ul')
+// let Name = new Promise((resolve,reject) => {
+//     setTimeout(() =>{
+//         resolve('Gowri')
+//     },3000)
+// })
+// console.log(Name)
+// setTimeout(() => {
+//     console.log(Name)
+// },4000)
 
-let arr = ['One','Two','Three','Four']
-
-
-arr.forEach(chore=>{
-    const element = document.createElement('li')
-    const textNode = document.createTextNode(chore)
-    element.appendChild(textNode)
-
-   element.addEventListener('click',(e) => {
-  const userInput = window.prompt(`Are you sure that you want to delete "${chore}"`)
-  if (userInput === 'YES') e.target.remove()
+let Name = new Promise((resolve,reject) => {
+    setTimeout(() =>{
+        resolve('Gowri')
+    },3000)
 })
-    list.appendChild(element)
 
-})
+Name.then(name => {console.log(name)})
