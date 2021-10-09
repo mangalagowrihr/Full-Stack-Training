@@ -1,24 +1,17 @@
-// 1
-// let response = fetch('https://jsonplaceholder.typicode.com/users')
-// console.log(response)
+const list = document.querySelector('ul')
 
-// setTimeout(() => {
-//     const data=response
-//     console.log(data)
-// },2000)
+let arr = ['One','Two','Three','Four']
 
 
-// 2
-// let response = fetch('https://jsonplaceholder.typicode.com/users').then(res =>{
-//     let parsedData=res.json()
-//     console.log(parsedData)
-//     return (parsedData)
-// }).then(data => {console.log(data)})
+arr.forEach(chore=>{
+    const element = document.createElement('li')
+    const textNode = document.createTextNode(chore)
+    element.appendChild(textNode)
 
-
-//  or same output with less code
-let response = fetch('https://jsonplaceholder.typicode.com/users').then(res =>res.json()).then(data => {
-    console.log(data)
+   element.addEventListener('click',(e) => {
+  const userInput = window.prompt(`Are you sure that you want to delete "${chore}"`)
+  if (userInput === 'YES') e.target.remove()
 })
-   
+    list.appendChild(element)
 
+})
