@@ -1,17 +1,12 @@
-// 1
-// console.log("one")
+let value = new Promise((resolve,reject)=> {
+    setTimeout(() =>{
+        resolve('Hello')
+    },3000)
+})
 
-// setTimeout is only understood by web API javascript cannot understand asynchrounous functionalities it can only understand console.log
-// setTimeout(function timeout(){    
-//     console.log("Timer")
-// },5000);
+console.log(value)
 
-// console.log("Two")
-
-// 2
-// setTimeout(()=> {console.log('Timer')},0)
-
-// for(var i=0;i<1000;i++){
-//     console.log(i)
-// }
+setTimeout(() =>{
+    console.log(value)
+},4000)
 
