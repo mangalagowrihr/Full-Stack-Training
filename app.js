@@ -1,17 +1,65 @@
-// let Name = new Promise((resolve,reject) => {
-//     setTimeout(() =>{
-//         resolve('Gowri')
-//     },3000)
+// 1
+// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {console.log(data)})
+
+
+// 2
+// const table = document.querySelector('table')
+// console.log(table)
+// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {
+  
+//     data.forEach(user =>{
+//         let newRow = document.createElement('tr')
+//         let dataID = document.createElement('td')
+//         let dataIDtextNode = document.createTextNode(user.id)
+//         dataID.appendChild(dataIDtextNode)
+//         newRow.appendChild(dataID)
+
+//         table.appendChild(newRow)
+//     })
 // })
-// console.log(Name)
-// setTimeout(() => {
-//     console.log(Name)
-// },4000)
 
-let Name = new Promise((resolve,reject) => {
-    setTimeout(() =>{
-        resolve('Gowri')
-    },3000)
-})
 
-Name.then(name => {console.log(name)})
+// 3
+// const table = document.querySelector('table')
+// console.log(table)
+
+// const createRow = (user)=>{
+// let newRow = document.createElement('tr')
+//         let element =`
+//         <td>${user.id}</td>
+//         <td>${user.name}</td>
+//         <td>${user.email}</td>
+//         <td>${user.username}</td>`
+//         newRow.innerHTML = element
+//         return newRow
+// }
+
+// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {
+  
+//     console.log(data)
+//     data.forEach(user =>{
+        
+//         table.appendChild(createRow(user))
+//     })
+// })
+
+// 4
+
+// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {
+  
+//     console.log(data)
+//     data.forEach(user =>{
+        
+//         console.log(data)
+//     })
+// })
+
+
+const fetchData = async() =>{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    console.log(response)
+    const data = await response.json()
+    console.log(data)
+
+}
+fetchData()
