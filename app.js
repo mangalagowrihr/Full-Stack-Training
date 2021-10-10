@@ -1,65 +1,22 @@
-// 1
-// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {console.log(data)})
+const button = document.querySelector('button')
+const input = document.querySelector('input')
 
+const getData = async(item)=>{
+    console.log(item)
+    let url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=$(item)`
+    console.log(url)
 
-// 2
-// const table = document.querySelector('table')
-// console.log(table)
-// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {
-  
-//     data.forEach(user =>{
-//         let newRow = document.createElement('tr')
-//         let dataID = document.createElement('td')
-//         let dataIDtextNode = document.createTextNode(user.id)
-//         dataID.appendChild(dataIDtextNode)
-//         newRow.appendChild(dataID)
-
-//         table.appendChild(newRow)
-//     })
-// })
-
-
-// 3
-// const table = document.querySelector('table')
-// console.log(table)
-
-// const createRow = (user)=>{
-// let newRow = document.createElement('tr')
-//         let element =`
-//         <td>${user.id}</td>
-//         <td>${user.name}</td>
-//         <td>${user.email}</td>
-//         <td>${user.username}</td>`
-//         newRow.innerHTML = element
-//         return newRow
-// }
-
-// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {
-  
-//     console.log(data)
-//     data.forEach(user =>{
-        
-//         table.appendChild(createRow(user))
-//     })
-// })
-
-// 4
-
-// fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json()).then(data => {
-  
-//     console.log(data)
-//     data.forEach(user =>{
-        
-//         console.log(data)
-//     })
-// })
-
-
-const fetchData = async() =>{
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    console.log(response)
-    const data = await response.json()
-    console.log(data)
-
+    const res = await fetch(url)
+    const data = await res.json()
+    console.log()
+    data.hits.forEach(recipe =>{
+        console.log(recipe)
+    })
 }
-fetchData()
+
+// add event listener to the button
+button.addEventListener('click',(e) => {
+    getData(input.value)
+
+   
+})
