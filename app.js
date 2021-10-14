@@ -1,36 +1,19 @@
-// const button = document.querySelector('button')
-// const input =document.querySelector('input')
-// const div =document.querySelector('div')
+const path = require('path')
 
-// div.innerHTML = localStorage.getItem('InputValue')
+// console.log(path)
 
-// button.addEventListener('click',(req,res)=>{
-//     localStorage.setItem('InputValue',[1,2,3,4,5])
-//     div.innerHTML=input.value
-// })
+console.log(path.resolve('./app.js'))      //path.resolve converts to absolute path i,e root of a machine
+
+console.log(path.relative('/',"./temp/utils.js"))    //path.relative converts to relative path
 
 
-// Local Storage
-// 1
-// console.log(localStorage)
+console.log(path.extname('./app.js'))    //it will give an extension name of a path
 
 
-// 2. To SetItem
-// localStorage.setItem('InputValue',"Something")
-
-// 3.To GetItem
-// console.log(localStorage.getItem("InputValue"))
+console.log(path.dirname('./temp/utils.js'))    //gives the directory name i,e parent
 
 
-// 4
-const button = document.querySelector('button')
-const input =document.querySelector('input')
-const div =document.querySelector('div')
-
-const arr=[1,2,3,4,5]
+console.log(__dirname)    //gives the current directory name
 
 
-localStorage.setItem('val',JSON.stringify(arr))
-
-console.log(JSON.parse(localStorage.getItem('val')))
-
+console.log(path.join(__dirname,'app.js'))     //it is similar to path.resolve
