@@ -1,19 +1,28 @@
-const path = require('path')
-
-// console.log(path)
-
-console.log(path.resolve('./app.js'))      //path.resolve converts to absolute path i,e root of a machine
-
-console.log(path.relative('/',"./temp/utils.js"))    //path.relative converts to relative path
+const fs = require('fs')      //fs is a file system
 
 
-console.log(path.extname('./app.js'))    //it will give an extension name of a path
+// fs.readFile('./test.txt','utf8',(error,data) => {
+//     if(error) console.log(error)
+//     else console.log(data.toString())
+// })
+
+// console.log(fs.readFileSync('./test.txt','utf-8'))
+
+// console.log(`I'm a random log`)
 
 
-console.log(path.dirname('./temp/utils.js'))    //gives the directory name i,e parent
+// 2
+// fs.writeFile('./test.txt','Hi',(error) => {
+//     if(error) console.log(error)
+    
+// })
 
 
-console.log(__dirname)    //gives the current directory name
+// 3
+fs.writeFile('./test.txt',`Append me ${fs.readFileSync('./test.txt','utf8')}`,(error) => {
+        if(error) console.log(error)
+})
 
 
-console.log(path.join(__dirname,'app.js'))     //it is similar to path.resolve
+
+
